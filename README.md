@@ -4,7 +4,7 @@ Steps to run sample app
 
 1.Import this as a eclipse project
 
-2.Build using Nokia s40 SDK or using WTK_2.5
+2.Build using Nokia S40 SDK or using WTK_2.5
 
 3.Goto http://api.shephertz.com/
 
