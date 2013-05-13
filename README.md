@@ -1,27 +1,14 @@
 App42-Traffic-Junkie
 ===========================
-Steps to run sample app
 
-1.Import this as a eclipse project
+This is a sample J2ME social gaming app made using App42 backened platform. It uses social, user, storage and gaming APIs of App42 platform. Here are the few easy steps to run this sample app.
 
-2.Build using Nokia S40 SDK or using WTK_2.5
 
-3.Goto http://api.shephertz.com/
+1. [Register] (https://apphq.shephertz.com/register) with App42 platform
+2. Create an app once you are on Quickstart page after registeration.
+3. Goto dashboard and create a new game TrafficJunkie (Click on Business service manager->game service->add game->)
+4. If you are alread registered, login to [AppHQ] (http://apphq.shephertz.com) console and create an app from App Manager tab and do step #3 to create a game.
+5. Download the eclipse project from this repo and import it in the same.
+6. Open App42ServiceHandler.java in sample app and give the value of app42APIkey app42SecretKey that you have recieved in step 2 or 4
+7. Build and Run 
 
-4.[Register]  (http://api.shephertz.com/tutorials/quick-start-guide.pdf) with us.
-
-5.You will get api key and secret key after registering with us.
-
-6.Create a new app for using app42 cloud app select mobile cloud api app.
-
-7.You will get an api key and secret key.
-
-8.Click on Business service manager->game service->add game->
-
-9.Add a new game name with(TrafficJunkie)
-
-10.Open App42ServiceHandler.java in sample app.
-
-11.Assign app42APIkey and app42SecretKey here.
-
-12.Build and Run.
