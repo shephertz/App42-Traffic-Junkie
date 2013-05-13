@@ -20,4 +20,8 @@ Steps to run sample app
 
 9.Add a new game name with(TrafficJunkie)
 
-10.Run update code on nokia s40 SDK.
+10.Open App42ServiceHandler.java in sample app.
+
+11.Assign app42APIkey and app42SecretKey here.
+
+12.Build and Run.
