@@ -10,5 +10,6 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
 4. If you are alread registered, login to [AppHQ] (http://apphq.shephertz.com) console and create an app from App Manager tab and do step #3 to create a game.
 5. Download the eclipse project from this repo and import it in the same.
 6. Open App42ServiceHandler.java in sample app and give the value of app42APIkey app42SecretKey that you have recieved in step 2 or 4
+7. You can also modify your fbAppId and fbAppSecret variable to pass your own facebook app credentials. Read our blog post for more help about creating facebook app and its configuration.
 7. Build and Run 
 
