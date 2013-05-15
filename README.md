@@ -40,6 +40,18 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
   Social social = socialService.getFacebookProfile(oauthToken);
   UserContext.MyUserName = social.getFacebookProfile().getId();
   UserContext.MyDisplayName = social.getFacebookProfile().getName();
-	UserContext.MyPicUrl = social.getFacebookProfile().getPicture();
+  UserContext.MyPicUrl = social.getFacebookProfile().getPicture();
+  
+4. Store User Profile:
+
+   JSONObject userProfile = new JSONObject();
+    try {
+        userProfile.put("UserName", UserContext.MyUserName);
+        userProfile.put("DisplayName", UserContext.MyDisplayName);
+        userProfile.put("PicUrl", UserContext.MyPicUrl);
+        storageService.insertJSONDocument(Constants.ZAPAK_DB_NAME, Constants.USER_PROFILE_COLLECTION, userProfile.toString());
+    } catch (Exception e) {
+        e.printStackTrace();
+    }
 
 
