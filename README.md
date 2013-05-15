@@ -47,7 +47,9 @@ __Fetch Facebook Profile From Access Token:__
   UserContext.MyPicUrl = social.getFacebookProfile().getPicture();
 ```  
   
-__Store User Profile: This is to srore userProfile who is playing this game:__
+__Store User Profile:__ 
+This is to srore User Profile(Facebook Id, Display Name, PicURL etc.) 
+By saving user profile we can retrive display name for facebook id(Used to create friends leaderboard)
 
 ```
     JSONObject userProfile = new JSONObject();
