@@ -15,3 +15,9 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
 7. You can also modify your fbAppId and fbAppSecret variable to pass your own facebook app credentials. Read our blog post for more help about creating facebook app and its configuration.
 7. Build and Run 
 
+
+
+# Design Details
+
+
+
