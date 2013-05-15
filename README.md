@@ -70,5 +70,6 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
 8. For friends Leaderboard: 
 
    Game game = scoreBoardService.getTopNRankersByGroup(currentGameName, group);
-   here group is a vector for facebook ids of your friends. 
+   here group is a vector for facebook ids of your friends. Now we retive display name 
+   for facebook ids from Storage Service that we used earlier.
 
