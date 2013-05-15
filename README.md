@@ -42,7 +42,7 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
   UserContext.MyDisplayName = social.getFacebookProfile().getName();
   UserContext.MyPicUrl = social.getFacebookProfile().getPicture();
   
-4. Store User Profile:
+4. Store User Profile: This is to srore userProfile who is playing this game. 
 
    JSONObject userProfile = new JSONObject();
     try {
