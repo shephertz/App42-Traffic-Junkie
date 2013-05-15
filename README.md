@@ -19,7 +19,7 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
 
 # Design Details:
 
-1. Initilize Services
+__Initilize Services:__
 
 ```
       try{
@@ -32,13 +32,13 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
     	}
 ```
 
-2. Get Facebook Access Token:
+__Get Facebook Access Token:__
 
 ```
   String token = socialService.doFBOAuthAndGetToken(startMIDlet, fbAppId,null);
 ```  
   
-3. Fetch Facebook Profile From Access Token:
+__Fetch Facebook Profile From Access Token:__
 
 ```
   Social social = socialService.getFacebookProfile(oauthToken);
@@ -47,7 +47,7 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
   UserContext.MyPicUrl = social.getFacebookProfile().getPicture();
 ```  
   
-4. Store User Profile: This is to srore userProfile who is playing this game. 
+__Store User Profile: This is to srore userProfile who is playing this game:__
 
 ```
     JSONObject userProfile = new JSONObject();
@@ -60,30 +60,31 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
         e.printStackTrace();
     }
 ```
-5. Save Score:
+__Save Score:__
 
 ```
    Game game = scoreBoardService.saveUserScore(gameName, name, score);
 ```
 
-6. Get LeaderBoard: 
+__Get LeaderBoard:__ 
 
 ```
    Game game = scoreBoardService.getTopNRankers(currentGameName, new Integer(20));
 ```
 
-7. Get Facebook Friends: 
+__Get Facebook Friends:__ 
 
 ```
     final Social social = socialService.getFacebookFriendsFromAccessToken(oauthToken);
     social.getFriendList();
 ```
 
-8. For friends Leaderboard: 
+__For friends Leaderboard:__ 
 
 ```
    Game game = scoreBoardService.getTopNRankersByGroup(currentGameName, group);
+```   
    here group is a vector for facebook ids of your friends. Now we retive display name 
    for facebook ids from Storage Service that we used earlier.
-```   
+  
 
