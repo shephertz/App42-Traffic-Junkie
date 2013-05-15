@@ -1,6 +1,8 @@
 App42-Traffic-Junkie
 ===========================
 
+# Runnnig Sample
+
 This is a sample J2ME social gaming app made using App42 backened platform. It uses social, user, storage and gaming APIs of App42 platform. Here are the few easy steps to run this sample app.
 
 
