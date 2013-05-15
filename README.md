@@ -54,4 +54,12 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
         e.printStackTrace();
     }
 
+5. Save Score:
 
+  Game game = scoreBoardService.saveUserScore(gameName, name, score);
+  
+6. Get LeaderBoard: 
+   
+   Game game = scoreBoardService.getTopNRankers(currentGameName, new Integer(20));
+   
+   
