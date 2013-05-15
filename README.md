@@ -17,7 +17,29 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
 
 
 
-# Design Details
+# Design Details:
 
+1. Initilize Services
+
+      try{
+  		  ServiceAPI sp = new ServiceAPI(app42APIkey,app42SecretKey);
+	    	this.scoreBoardService = sp.buildScoreBoardService();
+	    	this.storageService = sp.buildStorageService();
+	    	this.socialService = sp.buildSocialService();
+    	}catch(Exception e){
+    		e.printStackTrace();
+    	}
+
+2. Get Facebook Access Token:
+
+  String token = socialService.doFBOAuthAndGetToken(startMIDlet, fbAppId,null);
+  
+  
+3. Fetch Facebook Profile From Access Token:
+
+  Social social = socialService.getFacebookProfile(oauthToken);
+  UserContext.MyUserName = social.getFacebookProfile().getId();
+  UserContext.MyDisplayName = social.getFacebookProfile().getName();
+	UserContext.MyPicUrl = social.getFacebookProfile().getPicture();
 
 
