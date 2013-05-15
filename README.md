@@ -56,10 +56,19 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
 
 5. Save Score:
 
-  Game game = scoreBoardService.saveUserScore(gameName, name, score);
+   Game game = scoreBoardService.saveUserScore(gameName, name, score);
   
 6. Get LeaderBoard: 
    
    Game game = scoreBoardService.getTopNRankers(currentGameName, new Integer(20));
+
+7. For friends Leaderboard: 
+
+   Game game = scoreBoardService.getTopNRankersByGroup(currentGameName, group);
+   here group is a vector for facebook ids of your friends 
    
+8. Get Facebook Friends: 
+
+    final Social social = socialService.getFacebookFriendsFromAccessToken(oauthToken);
+    social.getFriendList();
    
