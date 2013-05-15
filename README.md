@@ -21,30 +21,36 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
 
 1. Initilize Services
 
+```
       try{
-  		  ServiceAPI sp = new ServiceAPI(app42APIkey,app42SecretKey);
+	  	ServiceAPI sp = new ServiceAPI(app42APIkey,app42SecretKey);
 	    	this.scoreBoardService = sp.buildScoreBoardService();
 	    	this.storageService = sp.buildStorageService();
 	    	this.socialService = sp.buildSocialService();
     	}catch(Exception e){
     		e.printStackTrace();
     	}
+```
 
 2. Get Facebook Access Token:
 
+```
   String token = socialService.doFBOAuthAndGetToken(startMIDlet, fbAppId,null);
-  
+```  
   
 3. Fetch Facebook Profile From Access Token:
 
+```
   Social social = socialService.getFacebookProfile(oauthToken);
   UserContext.MyUserName = social.getFacebookProfile().getId();
   UserContext.MyDisplayName = social.getFacebookProfile().getName();
   UserContext.MyPicUrl = social.getFacebookProfile().getPicture();
+```  
   
 4. Store User Profile: This is to srore userProfile who is playing this game. 
 
-   JSONObject userProfile = new JSONObject();
+```
+    JSONObject userProfile = new JSONObject();
     try {
         userProfile.put("UserName", UserContext.MyUserName);
         userProfile.put("DisplayName", UserContext.MyDisplayName);
@@ -53,19 +59,25 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
     } catch (Exception e) {
         e.printStackTrace();
     }
-
+```
 5. Save Score:
 
+```
    Game game = scoreBoardService.saveUserScore(gameName, name, score);
-  
+```
+
 6. Get LeaderBoard: 
-   
+
+```
    Game game = scoreBoardService.getTopNRankers(currentGameName, new Integer(20));
+```
 
 7. Get Facebook Friends: 
 
+```
     final Social social = socialService.getFacebookFriendsFromAccessToken(oauthToken);
     social.getFriendList();
+```
 
 8. For friends Leaderboard: 
 
