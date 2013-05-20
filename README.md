@@ -19,7 +19,9 @@ This is a sample J2ME social gaming app made using App42 backened platform. It u
 
 # Design Details:
 
-__Initilize Services:__
+__Initialize Services:__
+
+Initialization has been done in App42ServiceHandler.java
 
 ```
       try{
@@ -34,11 +36,15 @@ __Initilize Services:__
 
 __Get Facebook Access Token:__
 
+This call is in LeaderBoard.java/PostGamePlay.java 
+
 ```
   String token = socialService.doFBOAuthAndGetToken(startMIDlet, fbAppId,null);
 ```  
   
 __Fetch Facebook Profile From Access Token:__
+
+This call is in LeaderBoard.java/PostGamePlay.java
 
 ```
   Social social = socialService.getFacebookProfile(oauthToken);
@@ -50,6 +56,8 @@ __Fetch Facebook Profile From Access Token:__
 __Store User Profile:__ 
 This is to srore User Profile(Facebook Id, Display Name, PicURL etc.) 
 By saving user profile we can retrive display name for facebook id(Used to create friends leaderboard)
+
+This call is done in App42ServiceHandler.java
 
 ```
     JSONObject userProfile = new JSONObject();
@@ -64,17 +72,23 @@ By saving user profile we can retrive display name for facebook id(Used to creat
 ```
 __Save Score:__
 
+This call is in PostGamePlay.java
+
 ```
    Game game = scoreBoardService.saveUserScore(gameName, name, score);
 ```
 
 __Get LeaderBoard:__ 
 
+This call is in LeaderBoard.java 
+
 ```
    Game game = scoreBoardService.getTopNRankers(currentGameName, new Integer(20));
 ```
 
 __Get Facebook Friends:__ 
+
+This call is in LeaderBoard.java 
 
 ```
     final Social social = socialService.getFacebookFriendsFromAccessToken(oauthToken);
