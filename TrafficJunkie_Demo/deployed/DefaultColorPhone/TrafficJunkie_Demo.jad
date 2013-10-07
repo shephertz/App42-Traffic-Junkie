@@ -1,5 +1,5 @@
 MIDlet-1: Traffic Junkie,/50x50_Screen.png,app.StartMidlet
-MIDlet-Jar-Size: 816020
+MIDlet-Jar-Size: 816200
 MIDlet-Jar-URL: TrafficJunkie_Demo.jar
 MIDlet-Name: Traffic Junkie
 MIDlet-Permissions: javax.microedition.io.Connector.http,javax.microedition.io.Connector.https

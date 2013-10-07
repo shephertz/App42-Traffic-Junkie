@@ -29,8 +29,8 @@ import com.shephertz.app42.paas.sdk.jme.storage.StorageService;
 
 public class App42ServiceHandler {
 	
-	private String app42APIkey = "";
-	private String app42SecretKey= "";
+	private String app42APIkey = "<Your API Key Here>";
+	private String app42SecretKey= "<Your Secret Key Here>";
 	
 	private String fbAppId = "145726228932172";
 	private String fbAppSecret = "48cf90a9ea0ee5da8a66fed8c97bcf0b";
